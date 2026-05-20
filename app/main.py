@@ -47,9 +47,10 @@ async def health_check():
 
 
 # Import and include routers
-from app.routes import auth
+from app.routes import auth, admin_bikes
 
 app.include_router(auth.router)
+app.include_router(admin_bikes.router)
 
 if __name__ == "__main__":
     import uvicorn
